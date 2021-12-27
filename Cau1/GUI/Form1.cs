@@ -24,6 +24,7 @@ namespace Cau1
         {
             // hiiooooooooooooooo
             // cái này test nha
+            // test x2
         }
 
         private void Form1_Load(object sender, EventArgs e)
