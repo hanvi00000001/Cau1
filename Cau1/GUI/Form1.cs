@@ -23,6 +23,7 @@ namespace Cau1
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             // hiiooooooooooooooo
+            // cái này test nha
         }
 
         private void Form1_Load(object sender, EventArgs e)
