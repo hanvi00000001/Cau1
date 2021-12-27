@@ -2,12 +2,6 @@
 using Cau1.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -28,7 +22,7 @@ namespace Cau1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            // hiiooooooooooooooo
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,7 +55,7 @@ namespace Cau1
             QlbhBEL cus = new QlbhBEL();
             cus.Id = int.Parse(tbid.Text);
             cus.Name = tbname.Text;
-            cus.PhoneNumber= int.Parse(tbsdt.Text);
+            cus.PhoneNumber = int.Parse(tbsdt.Text);
             cus.MS = decimal.Parse(tbno.Text);
             cusBAL.NewCustomer(cus);
 
@@ -87,9 +81,9 @@ namespace Cau1
                 row.Cells[2].Value = cus.PhoneNumber;
                 row.Cells[3].Value = cus.MS;
 
-            
+
+            }
         }
-    }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
