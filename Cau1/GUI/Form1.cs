@@ -28,7 +28,7 @@ namespace Cau1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+//hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
         }
 
         private void Form1_Load(object sender, EventArgs e)
