@@ -56,15 +56,18 @@ namespace Cau1
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            QlbhBEL cus = new QlbhBEL();
-            cus.Id = int.Parse(tbid.Text);
-            cus.Name = tbname.Text;
-            cus.PhoneNumber = int.Parse(tbsdt.Text);
-            cus.MS = decimal.Parse(tbno.Text);
-            cusBAL.NewCustomer(cus);
+            
+                QlbhBEL cus = new QlbhBEL();
+                cus.Id = int.Parse(tbid.Text);
+                cus.Name = tbname.Text;
+                cus.PhoneNumber = int.Parse(tbsdt.Text);
+                cus.MS = decimal.Parse(tbno.Text);
+                cusBAL.NewCustomer(cus);
 
-            dgvCustomer.Rows.Add(cus.Id, cus.Name, cus.PhoneNumber, cus.MS);
-        }
+                dgvCustomer.Rows.Add(cus.Id, cus.Name, cus.PhoneNumber, cus.MS);
+            }
+            
+        
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -91,13 +94,18 @@ namespace Cau1
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            QlbhBEL cus = new QlbhBEL();
-            cus.Id = int.Parse(tbid.Text);
-            cus.Name = tbname.Text;
+            
+            
+            if (MessageBox.Show("Bạn có chắc muốn xoá?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                QlbhBEL cus = new QlbhBEL();
+                cus.Id = int.Parse(tbid.Text);
+                cus.Name = tbname.Text;
 
-            cusBAL.DeleteCustomer(cus);
-            int idx = dgvCustomer.CurrentCell.RowIndex;
-            dgvCustomer.Rows.RemoveAt(idx);
+                cusBAL.DeleteCustomer(cus);
+                int idx = dgvCustomer.CurrentCell.RowIndex;
+                dgvCustomer.Rows.RemoveAt(idx);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
